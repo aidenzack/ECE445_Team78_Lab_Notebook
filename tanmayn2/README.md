@@ -22,4 +22,4 @@ to set up an FSYNC, with our fall back being that we can increase our sampling r
 - Our IMUs have an approximate read time of ~0.1ms
 - Even during the fastest movements such as a wrist flick (~30 ms), we can capture 5-6 samples and grab precise data.
 
-- ### 2026-02-25 - Full PCB Schematic Finalized
+### 2026-02-25 - Full PCB Schematic Finalized
