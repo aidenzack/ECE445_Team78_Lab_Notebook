@@ -23,3 +23,12 @@ to set up an FSYNC, with our fall back being that we can increase our sampling r
 - Even during the fastest movements such as a wrist flick (~30 ms), we can capture 5-6 samples and grab precise data.
 
 ### 2026-02-25 - Full PCB Schematic Finalized
+
+I completed the first revision of our PCB Schematic and design, involving the following components:
+
+- USB-C Receptacle (Power Input)
+- Charger + Power Path IC (BQ24074RGT)
+- 3.3V, 500mA LDO (TLV75533PDBVR)
+- Arduino Nano ESP32
+- Headers for Li-Po battery, IMUs
+- LEDs for Debugging
