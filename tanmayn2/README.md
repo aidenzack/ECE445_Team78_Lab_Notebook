@@ -32,3 +32,116 @@ I completed the first revision of our PCB Schematic and design, involving the fo
 - Arduino Nano ESP32
 - Headers for Li-Po battery, IMUs
 - LEDs for Debugging
+- Designed 8-pin JST-style connectors for each IMU
+- Implemented:
+  - **Series resistors (22–47 Ω)** on SPI lines
+  - **ESD protection** at connectors
+  - **Local decoupling** at each connector
+---
+
+## SPI Throughput & Utilization Analysis
+
+### Assumptions
+
+- 4 IMUs (wrist, elbow, hip, knee)
+- Sampling rate: **200 Hz**
+- Data per sample:
+  - Accelerometer: 6 bytes
+  - Gyroscope: 6 bytes
+  - Register overhead: 1 byte
+
+**Total per sample:**
+
+```
+13 bytes / sample / IMU
+```
+
+### Total Data Rate
+
+```
+13 bytes × 4 IMUs × 200 Hz = 10,400 bytes/s
+10,400 × 8                  = 83,200 bits/s
+```
+
+### SPI Bus Capacity (2 MHz)
+
+```
+2,000,000 bits/s ÷ 8 = 250,000 bytes/s
+```
+
+### Bus Utilization
+
+```
+83,200 / 2,000,000 = 4.16%
+```
+
+### Interpretation
+
+- Only **~4.16%** SPI bus utilization
+- System is far from bandwidth-limited
+- Allows operation at a **reduced SPI clock for robustness**
+
+---
+
+## SPI Timing & Cable Delay Analysis
+
+### SPI Clock
+
+Selected SPI clock: **2 MHz**
+
+```
+T            = 1 / 2 MHz = 500 ns
+Half-cycle   = 250 ns
+```
+
+### Cable Length Estimates
+
+| Sensor | Length (m) |
+| :----- | :--------- |
+| Wrist  | 1.00       |
+| Elbow  | 0.45       |
+| Hip    | 0.60       |
+| Knee   | 0.90       |
+
+### Propagation Delay (≈ 5 ns/m)
+
+**One-way delay:**
+
+```
+t_pd = 5 ns/m × L
+```
+
+| Sensor | Delay (ns) |
+| :----- | :--------- |
+| Wrist  | 5.00       |
+| Elbow  | 2.25       |
+| Hip    | 3.00       |
+| Knee   | 4.50       |
+
+**Round-trip delay:**
+
+```
+t_rt ≈ 2 × t_pd
+```
+
+| Sensor | Delay (ns) |
+| :----- | :--------- |
+| Wrist  | 10.0       |
+| Elbow  | 4.5        |
+| Hip    | 6.0        |
+| Knee   | 9.0        |
+
+### Timing Comparison (Worst Case — Wrist)
+
+```
+One-way    : 5 ns  / 250 ns = 2.0%
+Round-trip : 10 ns / 250 ns = 4.0%
+```
+
+### Interpretation
+
+- Cable delay is **small relative to the SPI timing budget**
+- 2 MHz provides **comfortable timing margin**
+- System remains robust despite off-board wiring
+
+---
