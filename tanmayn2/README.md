@@ -38,14 +38,14 @@ I completed the first revision of our PCB Schematic and design, involving the fo
   - **ESD protection** at connectors
   - **Local decoupling** at each connector
 
-***PCB Schematic***
+***PCB Schematic (Revision A)***
 <img width="2048" height="1410" alt="image" src="https://github.com/user-attachments/assets/a9238047-a672-4ee6-ab0d-fb7ea4a45b40" />
 
 ---
 
 ### 2026-03-02 - SPI Throughput & Utilization Analysis
 
-## Assumptions
+### Assumptions
 
 - 4 IMUs (wrist, elbow, hip, knee)
 - Sampling rate: **220 Hz**
