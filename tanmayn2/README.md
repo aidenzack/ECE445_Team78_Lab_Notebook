@@ -37,8 +37,10 @@ I completed the first revision of our PCB Schematic and design, involving the fo
   - **Series resistors (22–47 Ω)** on SPI lines
   - **ESD protection** at connectors
   - **Local decoupling** at each connector
+
+***PCB Schematic***
 <img width="2048" height="1410" alt="image" src="https://github.com/user-attachments/assets/a9238047-a672-4ee6-ab0d-fb7ea4a45b40" />
-_PCB Schematic_
+
 ---
 
 ## SPI Throughput & Utilization Analysis
