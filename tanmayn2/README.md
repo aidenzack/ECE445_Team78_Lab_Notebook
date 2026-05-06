@@ -43,9 +43,9 @@ I completed the first revision of our PCB Schematic and design, involving the fo
 
 ---
 
-## 3-2-2026 - SPI Throughput & Utilization Analysis
+### 2026-03-02 - SPI Throughput & Utilization Analysis
 
-### Assumptions
+## Assumptions
 
 - 4 IMUs (wrist, elbow, hip, knee)
 - Sampling rate: **220 Hz**
