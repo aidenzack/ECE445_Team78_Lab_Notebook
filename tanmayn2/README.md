@@ -22,7 +22,7 @@ to set up an FSYNC, with our fall back being that we can increase our sampling r
 - Our IMUs have an approximate read time of ~0.1ms
 - Even during the fastest movements such as a wrist flick (~30 ms), we can capture 5-6 samples and grab precise data.
 
-### Weeks of 2026-02-25 & 2026-03-02 - Full PCB Schematic Finalized
+### Weeks of 2026-02-25 & 2026-03-02 - Full PCB Schematic Finalized + 1st Round PCB Ordered
 
 I completed the first revision of our PCB Schematic and design, involving the following components:
 
@@ -40,6 +40,11 @@ I completed the first revision of our PCB Schematic and design, involving the fo
 
 ***PCB Schematic (Revision A)***
 <img width="2048" height="1410" alt="image" src="https://github.com/user-attachments/assets/a9238047-a672-4ee6-ab0d-fb7ea4a45b40" />
+
+
+After the PCB Design Review, we talked with our TA about whether or not we are allowed to implement the full Arduino Nano ESP32 devboard or only allowed to use the chip.
+
+Result - Allowed to use full Arduino Nano ESP32 Dev Board (w/ USB-C port, RESET button). Our PCB will be designed as expansion board for the MCU
 
 ---
 
