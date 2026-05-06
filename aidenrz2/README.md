@@ -53,14 +53,12 @@
 ### Objective - Wire IMUs and Microcontroller on Breadboard
 - Today we finished setting everything up on the breadboard and wired everything together. We used online tools for the location of different pins, such as GPIO, or SPI bus pins. We also began writing some simple Arduino code for the microcontroller.
 
-![Breadboard Implementation](images/Breadboard_Implmentation.png)
-
 ## 3/8
 ### Objective - Arduino Code
 - Finished writing all of the Arduino code and was able to get communication with the IMUs. Had tests verifying the WHOAMI register and was able to move the IMUs on the breadboard and see the data change together through the serial monitor.
 
 ![WHOAMI_REG](images/WHOAMI_REG.png)
-![IMU Data](images/IMU_DATA.png)
+![IMU Data](images/IMU_Data.png)
 
 ## 3/10 - Breadboard Demo
 ### Objective - Showcase IMU Communication with Microcontroller
@@ -87,6 +85,8 @@
 - When working on the breadboard for 4 IMUs, I realized by looking at different pin sheets, that the IMU needed 1.8 V instead of the 3.3 V for fsync. The IMU already had internal step down logic, but not for fsync. To counter this, we looked into either using resistors or another regulator, but the resistors is the easier option so we went with that. To get 3.3 to 1.8, it would be 10k for the top one and 12k for the bottom one. At this point, our group had figured out all 4 IMUs and fsync, but now we wanted to show the data better. Tanmay had previously used Spyder so we decided to go with that. Today, we were able to get pyserial working here, which proved that we were able to transfer the data from Arduino IDE to Python.
 
 ![Resistor Setup](images/ResistorSetup.png)
+
+![Breadboard Implementation](images/Breadboard_Implementation.png)
 
 ## 4/3
 ### Objective - Order PCB and Finish Spyder
