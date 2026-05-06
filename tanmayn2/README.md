@@ -44,7 +44,7 @@ I completed the first revision of our PCB Schematic and design, involving the fo
 ### Assumptions
 
 - 4 IMUs (wrist, elbow, hip, knee)
-- Sampling rate: **200 Hz**
+- Sampling rate: **220 Hz**
 - Data per sample:
   - Accelerometer: 6 bytes
   - Gyroscope: 6 bytes
@@ -59,8 +59,8 @@ I completed the first revision of our PCB Schematic and design, involving the fo
 ### Total Data Rate
 
 ```
-13 bytes × 4 IMUs × 200 Hz = 10,400 bytes/s
-10,400 × 8                  = 83,200 bits/s
+13 bytes × 4 IMUs × 220 Hz = 11,400 bytes/s
+11,440 × 8                  = 91,520 bits/s
 ```
 
 ### SPI Bus Capacity (2 MHz)
@@ -72,12 +72,12 @@ I completed the first revision of our PCB Schematic and design, involving the fo
 ### Bus Utilization
 
 ```
-83,200 / 2,000,000 = 4.16%
+91,520 / 2,000,000 = 4.576%
 ```
 
 ### Interpretation
 
-- Only **~4.16%** SPI bus utilization
+- Only **~4.576%** SPI bus utilization
 - System is far from bandwidth-limited
 - Allows operation at a **reduced SPI clock for robustness**
 
