@@ -43,7 +43,7 @@ I completed the first revision of our PCB Schematic and design, involving the fo
 
 ---
 
-## SPI Throughput & Utilization Analysis
+## 3-2-2026 - SPI Throughput & Utilization Analysis
 
 ### Assumptions
 
