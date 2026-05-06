@@ -43,9 +43,11 @@ I completed the first revision of our PCB Schematic and design, involving the fo
 
 ---
 
-### 2026-03-02 - SPI Throughput & Utilization Analysis
+### 2026-03-02 - Tolerance Analysis of SPI Bus and Cable Delay
 
-### Assumptions
+### SPI Throughput & Utilization Analysis
+
+_Assumptions_
 
 - 4 IMUs (wrist, elbow, hip, knee)
 - Sampling rate: **220 Hz**
@@ -85,9 +87,7 @@ I completed the first revision of our PCB Schematic and design, involving the fo
 - System is far from bandwidth-limited
 - Allows operation at a **reduced SPI clock for robustness**
 
----
-
-## SPI Timing & Cable Delay Analysis
+### SPI Timing & Cable Delay Analysis
 
 ### SPI Clock
 
