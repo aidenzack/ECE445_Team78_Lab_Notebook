@@ -156,9 +156,7 @@ Round-trip : 10 ns / 250 ns = 4.0%
 ---
 ## Week of 2026-03-08 - Testing and Validation
  
-> **Date:** 2026-03-08
- 
-While awaiting delivery of the Rev B PCB, the entire signal chain was validated on a breadboard. This allowed us to verify SPI bus integrity and IMU synchronization in parallel with PCB fabrication.
+The entire signal chain was validated on a breadboard. This allowed us to verify SPI bus integrity and IMU synchronization in parallel with PCB fabrication.
  
 ### Breadboard Setup
  
@@ -206,7 +204,7 @@ The breadboard mirrors the central PCB topology:
 ---
 ## Week of 2026-03-23 - PCB Revisions
 
-At the onset of delivery of our 1st Round PCB order, several issues were identified that required revisions before fabrication of Rev B.
+At the onset of delivery of our 1st Round PCB order, several issues were identified that required revisions before fabrication of our final design.
  
 ### Battery Connector Footprint Mismatch
  
@@ -245,3 +243,23 @@ FSYNC = FSYNC_B × ( 2.2 kΩ / (1.91 kΩ + 2.2 kΩ) )
 
 **_FINALIZED PCB DESIGN_**
 <img width="1614" height="1453" alt="image" src="https://github.com/user-attachments/assets/155a42be-902a-4f00-96fb-fdb90156b940" />
+
+---
+
+## Week of 2026-03-30 - Initial Python Implementation
+
+- Set up Python implementation via Spyder to process serial SPI data, set up initial zero calibration, capture accelerometer and gyroscope data from all 4 IMUs using hard triggers (START, STOP), and plot accelerometer and gyroscope data across all axes and for the IMU of the user's choosing.
+- Extended and expanded upon heading into the week of 2026-04-06 in preparation for Progress Demo
+
+---
+
+## Week of 2026-04-06 - Progress Demo
+
+- Set up end-to-end implementation from validating IMU connection to microcontroller via a healthy SPI bus, performed zero-calibration and proving effects of FSYNC on sample collection, and post-processing and data depiction through our Spyder implementation.
+- Professor Joohyung Kim approved of the software backend and expected us to expand on it for interpretability and ease of operation, yet wanted to ensure our final on-body implementation can ensure the same functionality, especially with cable runs and promoting signal integrity to/from IMUs.
+
+---
+
+## Week of 2026-04-13 - Begin PCB Soldering
+
+- 
