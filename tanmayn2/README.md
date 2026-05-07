@@ -270,3 +270,45 @@ FSYNC = FSYNC_B × ( 2.2 kΩ / (1.91 kΩ + 2.2 kΩ) )
 **_PCB Probing_**
 <img width="370" height="299" alt="image" src="https://github.com/user-attachments/assets/afffbd81-6755-4fb4-9da8-9a4362af3e14" />
 
+---
+
+## Week of 2026-04-20 - Mock Demo + Presentation
+
+- After finalizing PCB functionality and set up cable connections to IMUs, we set out to finalize on-body implementation and refine our software. We did the following:
+  - CAD'ed and 3D-printed enclosures for the PCB and IMUs
+  - Crafted straps for IMUs to sit on and to wear on the body
+  - Crafted chest brace for PCB
+  - Connected the entire PCB-IMU system to one of our teammates (Arjun)
+  - Switched our Python implementation over to Dash Plotly
+  - Implemented trigger-based Start (knee dip) and Stop (Wrist flick) shot capture mechanic into Python code
+
+ **_UI Dashboard_**
+<img width="1216" height="481" alt="image" src="https://github.com/user-attachments/assets/c56b6d1d-ff70-4913-b559-b4ea433ca8b1" />
+
+  
+- Mingrui (TA) informed us that while everything looks good, we need to focus on implementing feedback and figure out that soon, as that is one of the more significant components of our project
+
+
+---
+
+## Week of 2026-04-27 - Final Demo + Presentation
+
+- All components from last week were improved upon for greater functionality and security. This includes the following:
+  - Changed from exposed, Dupont terminal crimp pins to 2.54mm pitch connector metal terminals and KF2510 housing connector for better functionality
+  - Bolstered straps for IMUs and PCB to be less constricting yet more secure
+  - **Implemented Feedback Mechanism into UI Dashboard**
+    - Implemented High Pass Filter + Notch Filter to suppress noise over cable runs and strengthen integrity
+    - Extracts peak gyroscope and accelerometer metrics along with timings between IMU peaks
+    - Calculates over normal distribution in comparison to the success profile and assigns a "severity" score as to which issue is best to focus on
+
+<img width="696" height="184" alt="image" src="https://github.com/user-attachments/assets/cf348f94-f180-4137-b57e-8dcacdcce538" />
+
+  - Added Shot Label Status with line of feedback, FG%, Last 20 Shots Improvement, and plot controls
+
+<img width="694" height="369" alt="image" src="https://github.com/user-attachments/assets/4844cba7-bb0b-4aa9-ae45-97d70f5974c9" />
+
+---
+
+## Final Demo Reflection
+
+Overall, a solid implementation that represents what we aimed to do.
