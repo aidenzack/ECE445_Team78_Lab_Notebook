@@ -262,4 +262,11 @@ FSYNC = FSYNC_B × ( 2.2 kΩ / (1.91 kΩ + 2.2 kΩ) )
 
 ## Week of 2026-04-13 - Begin PCB Soldering
 
-- 
+- With our finalized PCB finally delivered and our software implementation in a good spot, we began soldering our PCB. We used the oven to solder on most of the components, aside from the connectors, and afterwards, verified trace connections by using the continuity function on the multimeter
+- Certain adjustments needed to be made. For instance, the ENABLE pin of the LDO was currently floating due to a mistake we made on the tracing side. We fixed this by soldering on a breadboard wire and tying the VSYS signal to the ENABLE pin, bringing it up to HIGH whenever the system is on and ensuring our LDO is actually working.
+- Another issue was where our USB-C was positioned on our board. We realized we needed to cut out part of the ground plane and create a notch for the USB-C cable to connect through. After working with the machine shop, we got it fixed.
+- From here, we wanted to check signal integrity from the PCB to the off-board IMUs via continuity mode and voltage readings when powered on.
+
+**_PCB Probing_**
+<img width="370" height="299" alt="image" src="https://github.com/user-attachments/assets/afffbd81-6755-4fb4-9da8-9a4362af3e14" />
+
